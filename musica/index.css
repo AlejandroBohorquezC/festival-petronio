@@ -6,6 +6,8 @@ body {
     display: flex;
     width: 100%;
     height: 90px;
+    background-color: #fff;
+    position: fixed;
     justify-content: center;
     align-items: center;
     box-shadow: 1px 5px 12px 0px rgba(0, 0, 0, 0.5);
@@ -22,11 +24,88 @@ body {
     border-left: 1px solid black;
 }
 
+.first-btn {
+    border: none;
+}
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    margin-top: 140px;
+    position: fixed;
+    width: 15%;
+    align-items: center;
+}
+
+.aside-btn {
+    text-decoration: none;
+    width: 80%;
+    text-align: center;
+    color: black;
+    font-size: 1.25rem;
+    padding: 20px 0px;
+    border-bottom: 1px solid black;
+}
+
 .selected {
     background-color: #000;
     color: #fff;
 }
 
-.first-btn {
+.bordernone-btn {
     border: none;
+}
+
+.contenedor-principal {
+    display: flex;
+    padding-top: 140px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-column {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.subtitulo {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.imagentexto {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+}
+
+.flex-start {
+    text-align: start;
+    width: 70%;
+}
+
+.img-border {
+    border: #000 solid 1px;
+}
+
+.partes-iguales {
+    width: 45%;
+}
+
+.tradiciones {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imagen-tradiciones {
+    width: 70%;
+    height: 300px;
 }
