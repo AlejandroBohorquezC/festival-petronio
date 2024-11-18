@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: "Raleway", sans-serif;
-    background-image: url(/assets/fondo-blanco.png);
+    background-image: url(/assets/fondo-blanco.avif);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -19,7 +19,7 @@ p {
     width: 100%;
     height: 90px;
     background-color: #fff;
-    background-image: url(/assets/fondo-blanco.png);
+    background-image: url(/assets/fondo-blanco.avif);
     background-position: top;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -65,13 +65,13 @@ p {
     border-bottom: 1px solid black;
 }
 
-.selected {
-    background-color: #000;
-    color: #fff;
-}
-
 .bordernone-btn {
     border: none;
+}
+
+.selected {
+    border: 5px navajowhite solid;
+    font-weight: 500;
 }
 
 .contenedor-principal {
@@ -105,6 +105,21 @@ p {
 .flex-start {
     text-align: start;
     width: 70%;
+}
+
+.imagenes {
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor-imagen1 {
+    width: 100%;
+}
+
+.contenedor-imagen2 {
+    width: 100%;
+    height: 25%;
+    margin: 25px 0px;
 }
 
 .img-border {

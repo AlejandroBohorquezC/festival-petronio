@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: "Raleway", sans-serif;
-    background-image: url(/assets/fondo-amarillo.png);
+    background-image: url(/assets/fondo-amarillo.avif);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -19,7 +19,7 @@ p {
     width: 100%;
     height: 90px;
     background-color: #fff;
-    background-image: url(/assets/fondo-amarillo.png);
+    background-image: url(/assets/fondo-amarillo.avif);
     background-position: top;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -65,13 +65,13 @@ p {
     border-bottom: 1px solid black;
 }
 
-.selected {
-    background-color: #000;
-    color: #fff;
-}
-
 .bordernone-btn {
     border: none;
+}
+
+.selected {
+    border: 5px navajowhite solid;
+    font-weight: 500;
 }
 
 .contenedor-principal {
@@ -107,8 +107,9 @@ p {
     width: 70%;
 }
 
-.img-border {
-    border: #000 solid 1px;
+.imagenes {
+    width: 100%;
+    height: 100%;
 }
 
 .partes-iguales {
