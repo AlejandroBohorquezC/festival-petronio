@@ -90,12 +90,14 @@
 
         <section class="calendario">
             <div>
-                <p class="dias">159</p>
+                <p id="dias-restantes" class="dias"></p>
                 <p class="texto-destacado">Días restantes</p>
             </div>
             <div>
                 <P class="texto-destacado">Calendario</P>
-                <p class="imagen-texto">imagen</p>
+                <div class="imagen-texto">
+                    <img src="/assets/seccion1/calendario/calendarioo.png" alt="" class="imagenes">
+                </div>
             </div>
             <div>
                 <p class="texto-destacado">Logo</p>
@@ -170,8 +172,7 @@
             </div>
             <div class="contenido">
                 <div>
-                    <p>Nombre</p>
-                    <p>Artista</p>
+                    <iframe src="https://www.youtube.com/embed/JkbJrAi5xw8" width="350" height="200"></iframe>
                 </div>
             </div>
         </section>
@@ -191,6 +192,28 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function calcularDiasRestantes() {
+                const hoy = new Date();
+                const añoActual = hoy.getFullYear();
+                let fechaObjetivo = new Date(añoActual, 7, 14); // 7 es agosto, ya que los meses en JavaScript empiezan desde 0
+
+                // Si la fecha objetivo ya pasó este año, se establece para el próximo año
+                if (hoy > fechaObjetivo) {
+                    fechaObjetivo = new Date(añoActual + 1, 7, 14);
+                }
+
+                const diferenciaTiempo = fechaObjetivo - hoy;
+                const diasRestantes = Math.ceil(diferenciaTiempo / (1000 * 60 * 60 * 24));
+
+                const parrafo = document.getElementById("dias-restantes")
+                parrafo.textContent = diasRestantes;
+            }
+            calcularDiasRestantes();
+        });
+
+    </script>
 </body>
 
 </html>

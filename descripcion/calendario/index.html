@@ -35,7 +35,7 @@
             <h1>Calendario</h1>
             <div class="imagentexto">
                 <div>
-                    <p class="dias">159</p>
+                    <p id="dias-restantes" class="dias"></p>
                     <p class="texto-destacado">Días <br> restantes</p>
                 </div>
                 <div class="contenedor-imagen1">
@@ -241,6 +241,29 @@
             </div>
         </section>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function calcularDiasRestantes() {
+                const hoy = new Date();
+                const añoActual = hoy.getFullYear();
+                let fechaObjetivo = new Date(añoActual, 7, 14); // 7 es agosto, ya que los meses en JavaScript empiezan desde 0
+
+                // Si la fecha objetivo ya pasó este año, se establece para el próximo año
+                if (hoy > fechaObjetivo) {
+                    fechaObjetivo = new Date(añoActual + 1, 7, 14);
+                }
+
+                const diferenciaTiempo = fechaObjetivo - hoy;
+                const diasRestantes = Math.ceil(diferenciaTiempo / (1000 * 60 * 60 * 24));
+
+                const parrafo = document.getElementById("dias-restantes")
+                parrafo.textContent = diasRestantes;
+            }
+            calcularDiasRestantes();
+        });
+
+    </script>
 </body>
 
 </html>
