@@ -24,9 +24,35 @@
         <a href="/ciudad/index.html" class="navegacion-btn">Ciudad</a>
     </nav>
 
+    <nav class="navegacionbar-movil">
+        <a href="/index.html" class="logo">
+            <img src="/assets/seccion1/logo/Logo_Mesa de trabajo 1.png" alt="Logo">
+        </a>
+
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <div class="menu" id="menu">
+            <a href="/descripcion/index.html" class="nav-link">Descripción</a>
+            <a href="/productos/index.html" class="nav-link">Productos</a>
+            <a href="/historia/index.html" class="nav-link">Historia</a>
+            <a href="/galeria/index.html" class="nav-link">Galería</a>
+            <a href="/musica/index.html" class="nav-link">Música</a>
+            <a href="/ciudad/index.html" class="nav-link">Ciudad</a>
+        </div>
+    </nav>
+
     <aside class="aside">
         <a href="/galeria/fotos/index.html" class="aside-btn selected">Fotos</a>
         <a href="/galeria/videos/index.html" class="aside-btn bordernone-btn">Videos</a>
+    </aside>
+
+    <button class="aside-toggle" onclick="toggleAside()">></button>
+
+    <!-- Contenido del aside -->
+    <aside class="aside-slide-left" id="aside">
+        <a href="/descripcion/tradiciones/index.html" class="aside-btn">Tradiciones</a>
+        <a href="/descripcion/calendario/index.html" class="aside-btn">Calendario</a>
+        <a href="/descripcion/consejos/index.html" class="aside-btn bordernone-btn">Consejos</a>
     </aside>
 
     <div class="contenedor-principal">
@@ -104,6 +130,18 @@
             </div>
         </section>
     </div>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+    <script>
+        function toggleAside() {
+            const aside = document.getElementById('aside');
+            aside.classList.toggle('open');
+        }
+    </script>
 </body>
 
 </html>

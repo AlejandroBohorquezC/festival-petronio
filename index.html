@@ -26,6 +26,23 @@
         <a href="/ciudad/index.html" class="navegacion-btn">Ciudad</a>
     </nav>
 
+    <nav class="navegacionbar-movil">
+        <a href="/index.html" class="logo">
+            <img src="/assets/seccion1/logo/Logo_Mesa de trabajo 1.png" alt="Logo">
+        </a>
+
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <div class="menu" id="menu">
+            <a href="/descripcion/index.html" class="nav-link">Descripción</a>
+            <a href="/productos/index.html" class="nav-link">Productos</a>
+            <a href="/historia/index.html" class="nav-link">Historia</a>
+            <a href="/galeria/index.html" class="nav-link">Galería</a>
+            <a href="/musica/index.html" class="nav-link">Música</a>
+            <a href="/ciudad/index.html" class="nav-link">Ciudad</a>
+        </div>
+    </nav>
+
     <div class="contenedor-principal">
         <main class="contenedor-column">
             <h1>Festival de Música del Pacífico Petronio Alvarez</h1>
@@ -167,23 +184,9 @@
         </section>
 
         <section class="contenedor-column margin-bottom">
-            <div class="titulo-seccion">
-                <p class="texto-destacado">Playlist</p>
-            </div>
             <div class="contenido">
                 <div>
                     <iframe src="https://www.youtube.com/embed/JkbJrAi5xw8" width="350" height="200"></iframe>
-                </div>
-            </div>
-        </section>
-
-        <section class="contenedor-column padding-bottom margin-bottom">
-            <div class="titulo-seccion">
-                <p class="texto-destacado">Contacto</p>
-            </div>
-            <div class="contenido">
-                <div class="contacto-texto">
-                    <a class="link-productos" href="/productos/index.html">Visitanos</a>
                 </div>
             </div>
         </section>
@@ -212,7 +215,18 @@
             }
             calcularDiasRestantes();
         });
-
+    </script>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+    <script>
+        function toggleAside() {
+            const aside = document.getElementById('aside');
+            aside.classList.toggle('open');
+        }
     </script>
 </body>
 

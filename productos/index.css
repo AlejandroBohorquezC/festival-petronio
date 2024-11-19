@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: "Raleway", sans-serif;
     background-image: url(/assets/fondo-amarillo.webp);
-    background-position: center;
+    background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -29,6 +29,10 @@ p {
     align-items: center;
     box-shadow: 1px 5px 12px 0px rgba(0, 0, 0, 0.5);
     margin-bottom: 50px;
+}
+
+.navegacionbar-movil {
+    display: none;
 }
 
 .navegacion-btn {
@@ -120,14 +124,182 @@ p {
 }
 
 .cards {
-    width: 25%;
-}
-
-.cards :nth-child(2) {
-    height: 150px;
-    border: 1px solid black;
+    width: 70%;
+    height: 300px;
 }
 
 .margin-bottom {
     margin-bottom: 50px;
+}
+
+@media (max-width: 650px) {
+    .navegacionbar {
+        display: none;
+    }
+
+    .navegacionbar-movil {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        width: 85%;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: white;
+        border-bottom: 1px solid #ddd;
+        z-index: 10000;
+    }
+
+    /* Estilos para el logo */
+    .logo img {
+        height: 40px;
+        width: auto;
+    }
+
+    /* Botón de menú hamburguesa */
+    .menu-toggle {
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Estilos para el menú (inicialmente oculto) */
+    .menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    /* Estilo de los enlaces del menú */
+    .nav-link {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: black;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+
+    .nav-link:hover {
+        background-color: #f0f0f0;
+    }
+
+    .aside {
+        display: none;
+    }
+
+    .aside-toggle {
+        font-size: 1.5rem;
+        background-color: none;
+        background-color: white;
+        color: black;
+        border: none;
+        padding: 10px 5px;
+        cursor: pointer;
+        position: fixed;
+        top: 80px;
+        left: 5px;
+        z-index: 1001;
+        border-radius: 5px;
+    }
+
+
+    /* Estilización del aside */
+    .aside-slide-left {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        /* Oculto fuera de la pantalla */
+        width: 250px;
+        height: 100%;
+        background-color: #fff;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        transition: left 0.3s ease;
+        z-index: 1000;
+        overflow-y: auto;
+        margin-top: 70px;
+    }
+
+    /* Mostrar el aside */
+    .aside-slide-left.open {
+        left: 0;
+        /* Se desliza hacia adentro */
+    }
+
+    /* Estilización de los enlaces */
+    .aside-btn {
+        display: block;
+        padding: 10px 15px;
+        color: #333;
+        text-decoration: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .aside-btn.bordernone-btn {
+        border-bottom: none;
+    }
+
+    body {
+        line-height: 1.6;
+        color: #333;
+        padding: 10px;
+    }
+
+    /* Contenedor principal */
+    .contenedor-principal {
+        display: flex;
+        flex-direction: column;
+        padding-top: 90px;
+        gap: 20px;
+    }
+
+    /* Estilos del título principal */
+    h1 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .contenedor-column {
+        width: 100%;
+    }
+
+    .imagenes {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    .contenedor-wrap {
+        width: 100%;
+    }
+
+    .cards {
+        width: 100%;
+    }
+
+    .btn-banner-left,
+    .btn-banner-right {
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn-banner-left {
+        left: -50px;
+    }
+
+    .btn-banner-right {
+        right: -50px;
+    }
 }

@@ -24,9 +24,35 @@
         <a href="/ciudad/index.html" class="navegacion-btn">Ciudad</a>
     </nav>
 
+    <nav class="navegacionbar-movil">
+        <a href="/index.html" class="logo">
+            <img src="/assets/seccion1/logo/Logo_Mesa de trabajo 1.png" alt="Logo">
+        </a>
+
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <div class="menu" id="menu">
+            <a href="/descripcion/index.html" class="nav-link">Descripción</a>
+            <a href="/productos/index.html" class="nav-link">Productos</a>
+            <a href="/historia/index.html" class="nav-link">Historia</a>
+            <a href="/galeria/index.html" class="nav-link">Galería</a>
+            <a href="/musica/index.html" class="nav-link">Música</a>
+            <a href="/ciudad/index.html" class="nav-link">Ciudad</a>
+        </div>
+    </nav>
+
     <aside class="aside">
         <a href="/historia/personas-destacadas/index.html" class="aside-btn">Personas destacadas</a>
         <a href="/historia/vestuarios/index.html" class="aside-btn selected bordernone-btn">Vestuarios</a>
+    </aside>
+
+    <button class="aside-toggle" onclick="toggleAside()">></button>
+
+    <!-- Contenido del aside -->
+    <aside class="aside-slide-left" id="aside">
+        <a href="/descripcion/tradiciones/index.html" class="aside-btn">Tradiciones</a>
+        <a href="/descripcion/calendario/index.html" class="aside-btn">Calendario</a>
+        <a href="/descripcion/consejos/index.html" class="aside-btn bordernone-btn">Consejos</a>
     </aside>
 
     <div class="contenedor-principal">
@@ -42,7 +68,7 @@
                     del evento, sino que también se convierten en una herramienta de visibilidad y resistencia cultural,
                     creando un espacio
                     de afirmación para las comunidades afrocolombianas.</p>
-                <div class="imagen-tradiciones img-border">
+                <div class="imagen-tradiciones">
                     <img src="/assets/Sección 3/Vestuarios/1.png" alt="" class="imagenes">
                 </div>
             </div>
@@ -64,15 +90,15 @@
                     con sus raíces y la naturaleza. Los zapatos suelen ser sencillos pero elaborados con materiales
                     naturales como el cuero
                     o la palma.</p>
-                <div class="partes-iguales img-border">
-                    <img src="/assets/Sección 3/Vestuarios/Turbante.jpg" alt="" class="imagenes">
+                <div class="partes-iguales">
+                    <img src="/assets/Sección 3/Vestuarios/turbante.jpg" alt="" class="imagenes">
                 </div>
             </div>
         </section>
         <section class="contenedor-column">
             <h3 class="subtitulo flex-start">Vestuario masculino</h3>
             <div class="imagentexto">
-                <div class="partes-iguales img-border">
+                <div class="partes-iguales">
                     <img src="/assets/Sección 3/Vestuarios/Camisas.jpg" alt="" class="imagenes">
                 </div>
                 <p class="partes-iguales">Los hombres generalmente usan camisas y pantalones de lino o algodón, cómodos
@@ -95,12 +121,24 @@
                     Pacífico, reviviendo mitos y leyendas locales. Además, actúan como una forma de resistencia
                     cultural, reafirmando el
                     orgullo y la identidad de las comunidades afrodescendientes frente a la marginalización.</p>
-                <div class="partes-iguales img-border">
+                <div class="partes-iguales">
                     <img src="/assets/Sección 3/Vestuarios/Disfraz de ave.jpg" alt="" class="imagenes">
                 </div>
             </div>
         </section>
     </div>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+    <script>
+        function toggleAside() {
+            const aside = document.getElementById('aside');
+            aside.classList.toggle('open');
+        }
+    </script>
 </body>
 
 </html>

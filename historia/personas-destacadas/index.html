@@ -24,9 +24,35 @@
         <a href="/ciudad/index.html" class="navegacion-btn">Ciudad</a>
     </nav>
 
+    <nav class="navegacionbar-movil">
+        <a href="/index.html" class="logo">
+            <img src="/assets/seccion1/logo/Logo_Mesa de trabajo 1.png" alt="Logo">
+        </a>
+
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <div class="menu" id="menu">
+            <a href="/descripcion/index.html" class="nav-link">Descripción</a>
+            <a href="/productos/index.html" class="nav-link">Productos</a>
+            <a href="/historia/index.html" class="nav-link">Historia</a>
+            <a href="/galeria/index.html" class="nav-link">Galería</a>
+            <a href="/musica/index.html" class="nav-link">Música</a>
+            <a href="/ciudad/index.html" class="nav-link">Ciudad</a>
+        </div>
+    </nav>
+
     <aside class="aside">
         <a href="/historia/personas-destacadas/index.html" class="aside-btn selected">Personas destacadas</a>
         <a href="/historia/vestuarios/index.html" class="aside-btn bordernone-btn">Vestuarios</a>
+    </aside>
+
+    <button class="aside-toggle" onclick="toggleAside()">></button>
+
+    <!-- Contenido del aside -->
+    <aside class="aside-slide-left" id="aside">
+        <a href="/descripcion/tradiciones/index.html" class="aside-btn">Tradiciones</a>
+        <a href="/descripcion/calendario/index.html" class="aside-btn">Calendario</a>
+        <a href="/descripcion/consejos/index.html" class="aside-btn bordernone-btn">Consejos</a>
     </aside>
 
     <div class="contenedor-principal">
@@ -48,7 +74,9 @@
                     </p>
                 </div>
                 <div class="info contenedor-imagen1">
-                    <img class="imagenes" src="/assets/Sección 3/Personas destacadas/Leonor González Mina.jpg" alt="">
+                    <img class="imagenes"
+                        src="/assets/Sección 3/Personas destacadas/Leonor-Gonzalez-Mina-la-negra-grande-de-colombia-cantante-colombiana.jpg"
+                        alt="">
                 </div>
                 <div class="info">
                     <p>Recibió premios importantes, incluyendo la Orden Simón Bolívar en 1980 y el premio Vida y Obra en
@@ -59,12 +87,6 @@
                         retirada en Cali, dejando un
                         legado musical y cultural imborrable.
                     </p>
-                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo
-                        consequat. Duis
-                    </p> -->
                 </div>
             </div>
             <h3 class="subtitulo flex-start">Hugo Candelario González</h3>
@@ -87,8 +109,7 @@
                     </p>
                 </div>
                 <div class="info contenedor-imagen1">
-                    <img class="imagenes" src="/assets/Sección 3/Personas destacadas/Hugo Candelario González.jpg"
-                        alt="">
+                    <img class="imagenes" src="/assets/Sección 3/Personas destacadas/hugo.jpg" alt="">
                 </div>
                 <div class="info">
                     <p>Ha participado en proyectos tanto nacionales como internacionales, colaborando con importantes
@@ -99,12 +120,6 @@
                         destacándose por su liderazgo y
                         contribución al patrimonio musical del Pacífico.
                     </p>
-                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo
-                        consequat. Duis
-                    </p> -->
                 </div>
             </div>
             <h3 class="subtitulo flex-start">José Antonio Torres Solís</h3>
@@ -125,8 +140,7 @@
                     </p>
                 </div>
                 <div class="info contenedor-imagen1">
-                    <img class="imagenes" src="/assets/Sección 3/Personas destacadas/José Antonio Torres Solís.jpg"
-                        alt="">
+                    <img class="imagenes" src="/assets/Sección 3/Personas destacadas/jose antonio.jpg" alt="">
                 </div>
                 <div class="info">
                     <p>En los años 80, la productora Gloria Triana lo incluyó en la serie documental Yuruparí, lo que
@@ -140,16 +154,22 @@
                         desarrollo de la
                         marimba y su enseñanza.
                     </p>
-                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo
-                        consequat. Duis
-                    </p> -->
                 </div>
             </div>
         </main>
     </div>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+    <script>
+        function toggleAside() {
+            const aside = document.getElementById('aside');
+            aside.classList.toggle('open');
+        }
+    </script>
 </body>
 
 </html>
